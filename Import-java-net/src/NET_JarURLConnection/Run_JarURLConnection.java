@@ -4,18 +4,18 @@ import java.util.Scanner;
 import util.LimparConsole;
 import util.Pausar;
 
-public class Run_URLConnection {
+public class Run_JarURLConnection {
 
-	public String Start_URLConnection() {
+	public String Start_JarURLConnectoin() {
 
 		Pausar pausar = new Pausar();
 		LimparConsole clear = new LimparConsole();
 		Scanner scanner = new Scanner(System.in);
 
 		// Vetor de opções do menu
-		String[] menuOptions = { "|_URLConnection = Simple", "|_URLConnection = If e else if",
-				"|_URLConnection = For com Matrix", "|_URLConnection = do while com Matrix", "|_URLConnection = Vetor",
-				"|_URLConnection = Sair" };
+		String[] menuOptions = { "|_ JarURLConnectoin = Simple", "|_ JarURLConnectoin = If e else if",
+				"|_ JarURLConnectoin = For com Matrix", "|_ JarURLConnectoin = do while com Matrix",
+				"|_ JarURLConnectoin = Vetor", "|_ JarURLConnectoin = Sair" };
 
 		int choice;
 		do {

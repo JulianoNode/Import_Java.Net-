@@ -1,4 +1,4 @@
-package NET_URLConnection;
+package NET_InetSocketAddress;
 
 import util.Linhas;
 

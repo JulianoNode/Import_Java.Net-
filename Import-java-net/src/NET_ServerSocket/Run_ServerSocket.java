@@ -1,20 +1,21 @@
-package NET_URL;
+package NET_ServerSocket;
 
 import java.util.Scanner;
 import util.LimparConsole;
 import util.Pausar;
 
-public class Run_URL {
-	
-	public String Start_URL() {
+public class Run_ServerSocket {
+
+	public String Start_ServerSocket() {
 
 		Pausar pausar = new Pausar();
 		LimparConsole clear = new LimparConsole();
 		Scanner scanner = new Scanner(System.in);
 
 		// Vetor de opções do menu
-		String[] menuOptions = { "|_ URL = Simple", "|_ URL = If e else if", "|_ URL = For com Matrix",
-				"|_ URL = do while com Matrix", "|_ URL = Vetor", "|_ URL = Sair" };
+		String[] menuOptions = { "|_ ServerSocket = Simple", "|_ ServerSocket = If e else if",
+				"|_ ServerSocket = For com Matrix", "|_ ServerSocket = do while com Matrix", "|_ ServerSocket = Vetor",
+				"|_ ServerSocket = Sair" };
 
 		int choice;
 		do {

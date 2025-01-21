@@ -1,30 +1,29 @@
-package NET_URLConnection;
+package NET_DatagramSocket;
 
 import util.Linhas;
 
-public class Vetor_ {
+public class While_Matrix {
 	public String VetorMatrix_Run() {
-		
 		Linhas linhas = new Linhas();
 		String collec = "\n\t Nome do comando \n";
 		System.err.println(collec);
 		
 		linhas.run_Caracteres();
-		Import_D import_1 = new Import_D();
+		Import_A import_1 = new Import_A();
 		System.out.println(import_1.run_Import_1());
 		
 		linhas.run_Caracteres();
-		Import_E import_2 = new Import_E();
+		Import_B import_2 = new Import_B();
 		System.out.println(import_2.run_Import_2());
 		
 		linhas.run_Caracteres();
-		Import_F import_3 = new Import_F();
+		Import_C import_3 = new Import_C();
 		System.out.println(import_3.run_Import_3());
 		return "_________________________________________";		
 	}
 }
 
-class Import_D{
+class Import_A{
 	
 	public String run_Import_1() {
 		System.err.println("\n");
@@ -32,14 +31,14 @@ class Import_D{
 	}
 }
 
-class Import_E{
+class Import_B{
 	public String run_Import_2() {
 		System.err.println("\n");
 		return "\n\n***** ***** |_____| *****s *****";	
 	}
 }
 
-class Import_F{
+class Import_C{
 	public String run_Import_3() {
 		System.err.println("\n");
 		return "\n\n***** ***** |_____| ***** *****";	

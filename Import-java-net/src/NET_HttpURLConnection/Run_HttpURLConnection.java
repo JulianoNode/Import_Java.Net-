@@ -1,20 +1,21 @@
-package NET_URL;
+package NET_HttpURLConnection;
 
 import java.util.Scanner;
 import util.LimparConsole;
 import util.Pausar;
 
-public class Run_URL {
-	
-	public String Start_URL() {
+public class Run_HttpURLConnection {
+
+	public String Start_HttpURLConnection() {
 
 		Pausar pausar = new Pausar();
 		LimparConsole clear = new LimparConsole();
 		Scanner scanner = new Scanner(System.in);
 
 		// Vetor de opções do menu
-		String[] menuOptions = { "|_ URL = Simple", "|_ URL = If e else if", "|_ URL = For com Matrix",
-				"|_ URL = do while com Matrix", "|_ URL = Vetor", "|_ URL = Sair" };
+		String[] menuOptions = { "|_ HttpURLConnection = Simple", "|_ HttpURLConnection = If e else if",
+				"|_ HttpURLConnection = For com Matrix", "|_ HttpURLConnection = do while com Matrix",
+				"|_ HttpURLConnection = Vetor", "|_ HttpURLConnection = Sair" };
 
 		int choice;
 		do {

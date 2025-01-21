@@ -27,21 +27,21 @@ public class Vetor_ {
 class Import_D{
 	
 	public String run_Import_1() {
-		System.err.println("\n");
+		
 		return "\n\n***** |_____| *****";		
 	}
 }
 
 class Import_E{
 	public String run_Import_2() {
-		System.err.println("\n");
+
 		return "\n\n***** ***** |_____| *****s *****";	
 	}
 }
 
 class Import_F{
 	public String run_Import_3() {
-		System.err.println("\n");
+
 		return "\n\n***** ***** |_____| ***** *****";	
 	}
 }

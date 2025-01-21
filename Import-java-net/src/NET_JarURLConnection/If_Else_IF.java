@@ -27,21 +27,21 @@ public class If_Else_IF {
 class Import_4{
 	
 	public String run_Import_1() {
-		System.err.println("\n");
+		
 		return "\n\n***** |_____| *****";		
 	}
 }
 
 class Import_5{
 	public String run_Import_2() {
-		System.err.println("\n");
+
 		return "\n\n***** ***** |_____| *****s *****";	
 	}
 }
 
 class Import_6{
 	public String run_Import_3() {
-		System.err.println("\n");
+
 		return "\n\n***** ***** |_____| ***** *****";	
 	}
 }

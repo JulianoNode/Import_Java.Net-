@@ -1,11 +1,20 @@
 package NET_JarURLConnection;
 
 import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.io.OutputStream;
-import java.net.HttpURLConnection;
+import java.lang.reflect.Method;
+import java.net.JarURLConnection;
 import java.net.URL;
-import java.net.URLConnection;
+import java.net.URLClassLoader;
+import java.util.Enumeration;
+import java.util.jar.Attributes;
+import java.util.jar.JarEntry;
+import java.util.jar.JarFile;
+import java.util.jar.Manifest;
 
 import util.Linhas;
 
@@ -15,144 +24,214 @@ public class Simples {
 		Linhas linhas = new Linhas();
 		String collec = "\n\t Nome do comando \n";
 		System.err.println(collec);
-		
+
 		linhas.run_Caracteres();
 		Import_1 import_1 = new Import_1();
 		System.out.println(import_1.run_Import_1());
-		
+
 		linhas.run_Caracteres();
 		Import_2 import_2 = new Import_2();
 		System.out.println(import_2.run_Import_2());
-		
+
 		linhas.run_Caracteres();
 		Import_3 import_3 = new Import_3();
 		System.out.println(import_3.run_Import_3());
-		
+
 		linhas.run_Caracteres();
-		Import_4d import_4d = new Import_4d();
-		System.out.println(import_4d.run_Import_4d());
-		
+		Import_1A import_1A = new Import_1A();
+		System.out.println(import_1A.run_Import_1A());
+
 		linhas.run_Caracteres();
-		Import_5c import_5c = new Import_5c();
-		System.out.println(import_5c.run_Import_5c());
-		return "_________________________________________";		
+		Import_2B import_2B = new Import_2B();
+		System.out.println(import_2B.run_Import_2B());
+
+		linhas.run_Caracteres();
+		Import_3C import_3C = new Import_3C();
+		System.out.println(import_3C.run_Import_3C());
+		return "_________________________________________";
 	}
 }
 
-class Import_1{
+class Import_1 {
+
 	public String run_Import_1() {
-		System.err.println("1. Conectar e Exibir o Conteúdo de uma URL\n");
-        try {
-            @SuppressWarnings("deprecation")
-			URL url = new URL("http://www.google.com");
-            URLConnection connection = url.openConnection();
-            BufferedReader in = new BufferedReader(new InputStreamReader(connection.getInputStream()));
-
-            String inputLine;
-            while ((inputLine = in.readLine()) != null) {
-                System.out.println(inputLine);
-            }
-            in.close();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+		System.err.println("1: Listar Arquivos Dentro de um JAR\n"
+				+ "Este código acessa um JAR e lista os arquivos dentro dele.\n");
 		
-		return "\n\n***** |_____| *****";		
+        try {
+            // Caminho para o JAR (altere para o caminho correto do seu JAR)
+            @SuppressWarnings("deprecation")
+			URL jarUrl = new URL("jar:file:/caminho/para/seu_arquivo.jar!/");
+            
+            // Abrindo conexão com o JAR
+            JarURLConnection jarConnection = (JarURLConnection) jarUrl.openConnection();
+            JarFile jarFile = jarConnection.getJarFile();
+
+            // Listando os arquivos dentro do JAR
+            Enumeration<JarEntry> entries = jarFile.entries();
+            while (entries.hasMoreElements()) {
+                System.out.println(entries.nextElement().getName());
+            }
+
+            jarFile.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+		return "\n\n***** ***** |_____| ***** *****";
 	}
 }
 
-class Import_2{
+class Import_2 {
 	public String run_Import_2() {
-		System.err.println("2. Conectar e Obter o Tipo de Conteúdo\n");
+		System.err.println("2: Ler um Arquivo Específico Dentro de um JAR\n"
+				+ "Este código lê um arquivo de texto chamado dados.txt dentro do JAR e exibe seu conteúdo.\n");
+		
         try {
+            // Caminho para o arquivo dentro do JAR
             @SuppressWarnings("deprecation")
-			URL url = new URL("http://www.example.com");
-            URLConnection connection = url.openConnection();
+			URL fileUrl = new URL("jar:file:/caminho/para/seu_arquivo.jar!/dados.txt");
 
-            System.out.println("Tipo de conteúdo: " + connection.getContentType());
-        } catch (Exception e) {
+            // Abrindo conexão
+            JarURLConnection jarConnection = (JarURLConnection) fileUrl.openConnection();
+            InputStream inputStream = jarConnection.getInputStream();
+            
+            // Lendo o conteúdo do arquivo
+            BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream));
+            String line;
+            while ((line = reader.readLine()) != null) {
+                System.out.println(line);
+            }
+
+            reader.close();
+        } catch (IOException e) {
             e.printStackTrace();
         }
-		return "\n\n***** ***** |_____| *****s *****";	
+
+		return "\n\n***** ***** |_____| ***** *****";
 	}
 }
 
-class Import_3{
+class Import_3 {
 	public String run_Import_3() {
-		System.err.println("3. Configurar Cabeçalhos HTTP (User-Agent)\n");
-        try {
-            @SuppressWarnings("deprecation")
-			URL url = new URL("http://www.example.com");
-            URLConnection connection = url.openConnection();
-            connection.setRequestProperty("User-Agent", "Mozilla/5.0");
+		System.err.println("4: Obter Informações do Manifesto do JAR\n"
+				+ "Este código lê o manifesto (META-INF/MANIFEST.MF) do JAR e exibe suas propriedades.\n");
+		try {
+			// URL para o Manifest dentro do JAR
+			@SuppressWarnings("deprecation")
+			URL manifestUrl = new URL("jar:file:/caminho/para/seu_arquivo.jar!/META-INF/MANIFEST.MF");
 
-            BufferedReader in = new BufferedReader(new InputStreamReader(connection.getInputStream()));
-            String inputLine;
-            while ((inputLine = in.readLine()) != null) {
-                System.out.println(inputLine);
-            }
-            in.close();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-		return "\n\n***** ***** |_____| ***** *****";	
+			// Abrindo conexão
+			JarURLConnection jarConnection = (JarURLConnection) manifestUrl.openConnection();
+			Manifest manifest = jarConnection.getManifest();
+
+			// Obtendo os atributos do Manifest
+			Attributes attributes = manifest.getMainAttributes();
+			for (Object key : attributes.keySet()) {
+				System.out.println(key + ": " + attributes.getValue(key.toString()));
+			}
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		return "\n\n***** ***** |_____| ***** *****";
 	}
 }
 
-class Import_4d{
-	public String run_Import_4d() {
-		System.err.println("4. Enviar Dados via POST\n");
-        try {
-            String urlParameters = "param1=value1&param2=value2";
-            byte[] postData = urlParameters.getBytes();
+class Import_1A {
+	public String run_Import_1A() {
+		System.err.println("3: Verificar Se um Arquivo Existe Dentro de um JAR\r\n"
+				+ "Este código verifica se um arquivo específico está dentro do JAR.\n");
 
-            @SuppressWarnings("deprecation")
-			URL url = new URL("http://www.example.com");
-            URLConnection connection = url.openConnection();
-            connection.setDoOutput(true);
-            
-            HttpURLConnection connectionPost = (HttpURLConnection) url.openConnection();
-            connectionPost.setRequestMethod("POST");
-            
+		try {
+			// URL do JAR
+			@SuppressWarnings("deprecation")
+			URL jarUrl = new URL("jar:file:/caminho/para/seu_arquivo.jar!/");
 
-            try (OutputStream os = connection.getOutputStream()) {
-                os.write(postData);
-                os.flush();
-            }
+			// Abrindo conexão
+			JarURLConnection jarConnection = (JarURLConnection) jarUrl.openConnection();
+			JarFile jarFile = jarConnection.getJarFile();
 
-            BufferedReader in = new BufferedReader(new InputStreamReader(connection.getInputStream()));
-            String inputLine;
-            while ((inputLine = in.readLine()) != null) {
-                System.out.println(inputLine);
-            }
-            in.close();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-		return "\n\n***** ***** |_____| ***** *****";	
+			// Nome do arquivo para verificar
+			String fileName = "dados.txt";
+
+			// Verifica se o arquivo existe
+			if (jarFile.getJarEntry(fileName) != null) {
+				System.out.println("O arquivo " + fileName + " existe dentro do JAR.");
+			} else {
+				System.out.println("O arquivo " + fileName + " não foi encontrado no JAR.");
+			}
+
+			jarFile.close();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
+		return "\n\n***** ***** |_____| ***** *****";
 	}
 }
 
-class Import_5c{
-	public String run_Import_5c() {
-		System.err.println("5. Fazer uma Conexão com um Proxy\n");
-		 try {
-	            System.setProperty("http.proxyHost", "proxy.example.com");
-	            System.setProperty("http.proxyPort", "8080");
+class Import_2B {
+	public String run_Import_2B() {
+		System.err.println("5: Extrair Arquivo de um JAR\n"
+				+ "Este código copia um arquivo de dentro do JAR para o sistema de arquivos.\n");
 
-	            @SuppressWarnings("deprecation")
-				URL url = new URL("http://www.example.com");
-	            URLConnection connection = url.openConnection();
+		try {
+			// URL do arquivo dentro do JAR
+			@SuppressWarnings("deprecation")
+			URL fileUrl = new URL("jar:file:G:/Caminhho/seu_arquivo.jar!/dados.txt");
 
-	            BufferedReader in = new BufferedReader(new InputStreamReader(connection.getInputStream()));
-	            String inputLine;
-	            while ((inputLine = in.readLine()) != null) {
-	                System.out.println(inputLine);
-	            }
-	            in.close();
-	        } catch (Exception e) {
-	            e.printStackTrace();
-	        }
-		return "\n\n***** ***** |_____| ***** *****";	
+			// Abrindo conexão
+			JarURLConnection jarConnection = (JarURLConnection) fileUrl.openConnection();
+			InputStream inputStream = jarConnection.getInputStream();
+
+			// Criando arquivo local
+			FileOutputStream outputStream = new FileOutputStream("dados_extraido.txt");
+
+			// Copiando conteúdo
+			byte[] buffer = new byte[1024];
+			int bytesRead;
+			while ((bytesRead = inputStream.read(buffer)) != -1) {
+				outputStream.write(buffer, 0, bytesRead);
+			}
+
+			// Fechando streams
+			inputStream.close();
+			outputStream.close();
+			System.out.println("Arquivo extraído com sucesso!");
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
+		return "\n\n***** ***** |_____| ***** *****";
+	}
+}
+
+class Import_3C {
+	public String run_Import_3C() {
+		System.err.println("6: Carregar Classe de um JAR Dinamicamente\n"
+				+ "Este código carrega uma classe de um JAR e executa um método dela.\n");
+
+		try {
+			// Caminho do JAR
+			File file = new File("G:/Caminhho/seu_arquivo.jar");
+			URL jarUrl = file.toURI().toURL();
+
+			// Criando um class loader
+			URLClassLoader classLoader = new URLClassLoader(new URL[] { jarUrl });
+
+			// Nome da classe que deseja carregar
+			String className = "com.exemplo.MinhaClasse";
+			Class<?> loadedClass = classLoader.loadClass(className);
+
+			// Criando uma instância e chamando um método
+			Object instance = loadedClass.getDeclaredConstructor().newInstance();
+			Method method = loadedClass.getMethod("meuMetodo");
+			method.invoke(instance);
+
+			classLoader.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return "\n\n***** ***** |_____| ***** *****";
 	}
 }

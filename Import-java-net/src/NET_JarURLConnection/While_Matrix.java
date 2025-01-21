@@ -26,21 +26,21 @@ public class While_Matrix {
 class Import_A{
 	
 	public String run_Import_1() {
-		System.err.println("\n");
+		
 		return "\n\n***** |_____| *****";		
 	}
 }
 
 class Import_B{
 	public String run_Import_2() {
-		System.err.println("\n");
+
 		return "\n\n***** ***** |_____| *****s *****";	
 	}
 }
 
 class Import_C{
 	public String run_Import_3() {
-		System.err.println("\n");
+
 		return "\n\n***** ***** |_____| ***** *****";	
 	}
 }

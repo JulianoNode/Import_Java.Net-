@@ -1,20 +1,21 @@
-package NET_URL;
+package NET_NextComand;
 
 import java.util.Scanner;
 import util.LimparConsole;
 import util.Pausar;
 
-public class Run_URL {
-	
-	public String Start_URL() {
+public class Run_ {
+
+	public String Start_() {
 
 		Pausar pausar = new Pausar();
 		LimparConsole clear = new LimparConsole();
 		Scanner scanner = new Scanner(System.in);
 
 		// Vetor de opções do menu
-		String[] menuOptions = { "|_ URL = Simple", "|_ URL = If e else if", "|_ URL = For com Matrix",
-				"|_ URL = do while com Matrix", "|_ URL = Vetor", "|_ URL = Sair" };
+		String[] menuOptions = { "|_ A = Simple", "|_ A = If e else if",
+				"|_ A = For com Matrix", "|_ A = do while com Matrix", "|_ A = Vetor",
+				"|_ A = Sair" };
 
 		int choice;
 		do {

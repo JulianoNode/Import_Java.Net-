@@ -1,20 +1,21 @@
-package NET_URL;
+package NET_DatagramSocket;
 
 import java.util.Scanner;
 import util.LimparConsole;
 import util.Pausar;
 
-public class Run_URL {
-	
-	public String Start_URL() {
+public class Run_DatagramSocket {
+
+	public String Start_DatagramSocket() {
 
 		Pausar pausar = new Pausar();
 		LimparConsole clear = new LimparConsole();
 		Scanner scanner = new Scanner(System.in);
 
 		// Vetor de opções do menu
-		String[] menuOptions = { "|_ URL = Simple", "|_ URL = If e else if", "|_ URL = For com Matrix",
-				"|_ URL = do while com Matrix", "|_ URL = Vetor", "|_ URL = Sair" };
+		String[] menuOptions = { "|_ DatagramSocket = Simple", "|_ DatagramSocket = If e else if",
+				"|_ DatagramSocket = For com Matrix", "|_ DatagramSocket = do while com Matrix",
+				"|_ DatagramSocket = Vetor", "|_ DatagramSocket = Sair" };
 
 		int choice;
 		do {

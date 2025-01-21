@@ -35,7 +35,7 @@ class Import_4{
 class Import_5{
 	public String run_Import_2() {
 		System.err.println("\n");
-		return "\n\n***** ***** |_____| *****s *****";	
+		return "\n\n***** ***** |_____| ***** *****";	
 	}
 }
 
