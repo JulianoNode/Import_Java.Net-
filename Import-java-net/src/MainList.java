@@ -16,7 +16,7 @@ import util.LimparConsole;
 import util.Pausar;
 
 public class MainList {
-	public static void main(String[] args) {
+	public static void main(String[] args) throws Exception {
 
 		Pausar pausar = new Pausar();
 		LimparConsole clear = new LimparConsole();

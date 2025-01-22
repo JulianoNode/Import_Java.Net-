@@ -6,7 +6,7 @@ import util.Pausar;
 
 public class Run_DatagramSocket {
 
-	public String Start_DatagramSocket() {
+	public String Start_DatagramSocket() throws Exception {
 
 		Pausar pausar = new Pausar();
 		LimparConsole clear = new LimparConsole();

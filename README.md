@@ -3,7 +3,7 @@
 
 📌 Lista Completa das Classes do java.net
 
-1️⃣ Manipulação de URLs
+🔴1️⃣ Manipulação de URLs
 
 ➡️URL – Representa um endereço de recurso na web.
 
@@ -15,7 +15,7 @@
 
 ➡️JarURLConnection – Subclasse de URLConnection usada para arquivos JAR.
 
-2️⃣ Sockets (Comunicação de Rede)
+🔴2️⃣ Sockets (Comunicação de Rede)
 
 ➡️Socket – Representa um socket do cliente para comunicação com um servidor.
 
@@ -29,7 +29,7 @@
 
 ➡️InetSocketAddress – Representa um endereço IP e porta de conexão.
 
-➡️3️⃣ Endereços IP e DNS
+🔴3️⃣ Endereços IP e DNS
 
 ➡️InetAddress – Representa um endereço IP (IPv4 ou IPv6).
 
@@ -38,7 +38,7 @@
 ➡️Inet6Address – Subclasse de InetAddress para endereços IPv6.
 
 
-➡️4️⃣ Gerenciamento de Proxies e Cookies
+🔴4️⃣ Gerenciamento de Proxies e Cookies
 
 ➡️Proxy – Representa um servidor proxy.
 
@@ -54,13 +54,13 @@
 
 ➡️PasswordAuthentication – Contém credenciais de usuário (usuário e senha).
 
-5️⃣ Codificação e Decodificação de URLs
+🔴5️⃣ Codificação e Decodificação de URLs
 
 ➡️URLEncoder – Codifica strings para serem usadas em URLs.
 
 ➡️URLDecoder – Decodifica strings codificadas em URLs.
 
-6️⃣ Classes para Serviços de Rede
+🔴6️⃣ Classes para Serviços de Rede
 
 ➡️NetworkInterface – Representa uma interface de rede local.
 
@@ -72,7 +72,7 @@
 
 ➡️SecureCacheResponse – Resposta em cache para conexões seguras (HTTPS).
 
-📌 Lista Completa das Interfaces do java.net
+🔴📌 Lista Completa das Interfaces do java.net
 
 ➡️FileNameMap – Mapeia extensões de arquivos para tipos MIME.
 
@@ -82,7 +82,7 @@
 
 ➡️ProtocolFamily – Representa uma família de protocolos de rede.
 
-📌 Lista Completa das Enumerações do java.net
+🔴📌 Lista Completa das Enumerações do java.net
 
 ➡️Proxy.Type – Define os tipos de proxy (DIRECT, HTTP, SOCKS).
 
@@ -91,4 +91,4 @@
 ➡️StandardSocketOptions – Define opções padrão de sockets.
 
 
-📌 Essa é a documentação completa dos comandos e classes disponíveis no pacote java.net.
+🔴📌 Essa é a documentação completa dos comandos e classes disponíveis no pacote java.net.
