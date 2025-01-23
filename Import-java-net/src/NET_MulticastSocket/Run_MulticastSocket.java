@@ -6,7 +6,7 @@ import util.Pausar;
 
 public class Run_MulticastSocket {
 
-	public String Start_MulticastSocket() {
+	public String Start_MulticastSocket() throws Exception {
 
 		Pausar pausar = new Pausar();
 		LimparConsole clear = new LimparConsole();

@@ -6,7 +6,7 @@ import util.Pausar;
 
 public class Run_SocketAddress {
 
-	public String Start_SocketAddress() {
+	public String Start_SocketAddress() throws Exception {
 
 		Pausar pausar = new Pausar();
 		LimparConsole clear = new LimparConsole();

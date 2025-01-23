@@ -1,12 +1,13 @@
 package NET_InetSocketAddress;
 
+import java.io.IOException;
 import java.util.Scanner;
 import util.LimparConsole;
 import util.Pausar;
 
 public class Run_InetSocketAddress {
 
-	public String Start_InetSocketAddress() {
+	public String Start_InetSocketAddress() throws IOException {
 
 		Pausar pausar = new Pausar();
 		LimparConsole clear = new LimparConsole();
