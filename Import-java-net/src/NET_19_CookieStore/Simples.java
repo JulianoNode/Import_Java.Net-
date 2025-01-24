@@ -1,4 +1,4 @@
-package NET_NextComand;
+package NET_19_CookieStore;
 
 import util.Linhas;
 
@@ -6,7 +6,7 @@ public class Simples {
 	public String Simples_Run() {
 
 		Linhas linhas = new Linhas();
-		String collec = "\n\t Nome do comando \n";
+		String collec = "\n\t CookieStore – Interface para armazenar cookies. \n";
 		System.err.println(collec);
 		
 		linhas.run_Caracteres();

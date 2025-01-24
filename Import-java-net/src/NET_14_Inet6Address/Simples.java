@@ -1,4 +1,4 @@
-package NET_NextComand;
+package NET_14_Inet6Address;
 
 import util.Linhas;
 
@@ -6,7 +6,7 @@ public class Simples {
 	public String Simples_Run() {
 
 		Linhas linhas = new Linhas();
-		String collec = "\n\t Nome do comando \n";
+		String collec = "\n\t Inet6Address – Subclasse de InetAddress para endereços IPv6. \n";
 		System.err.println(collec);
 		
 		linhas.run_Caracteres();

@@ -1,4 +1,4 @@
-package NET_NextComand;
+package NET_16_ProxySelector;
 
 import util.Linhas;
 
@@ -6,7 +6,7 @@ public class Simples {
 	public String Simples_Run() {
 
 		Linhas linhas = new Linhas();
-		String collec = "\n\t Nome do comando \n";
+		String collec = "\n\t ProxySelector – Seletor que determina qual proxy deve ser usado para conexões. \n";
 		System.err.println(collec);
 		
 		linhas.run_Caracteres();
