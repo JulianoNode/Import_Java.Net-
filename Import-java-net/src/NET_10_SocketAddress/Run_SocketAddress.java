@@ -1,8 +1,11 @@
 package NET_10_SocketAddress;
 
 import java.util.Scanner;
+
+import MainClass.Menu;
 import util.LimparConsole;
 import util.Pausar;
+import util.VoutarMenu;
 
 public class Run_SocketAddress {
 
@@ -15,7 +18,7 @@ public class Run_SocketAddress {
 		// Vetor de opções do menu
 		String[] menuOptions = { "|_ SocketAddress = Simple", "|_ SocketAddress = If e else if",
 				"|_ SocketAddress = For com Matrix", "|_ SocketAddress = do while com Matrix", "|_ SocketAddress = Vetor",
-				"|_ SocketAddress = Sair" };
+				"|_ Voutar para o menu", "|_ Sair" };
 
 		int choice;
 		do {
@@ -70,8 +73,16 @@ public class Run_SocketAddress {
 				clear.CleanConsole_Run();
 				break;
 
-			case 6: // Sair
+			case 6: // Voutar para o MEUNU
+				VoutarMenu voutarMenu = new VoutarMenu();
+				voutarMenu.run_CaracteresMenu_Red();
+				System.out.println("\n\n");
+				Menu menu = new Menu();
+				menu.Meun_Run();
 
+				break;
+
+			case 7: // Sair
 				System.out.println("Encerrando o programa...");
 				break;
 
@@ -79,8 +90,9 @@ public class Run_SocketAddress {
 				System.out.println("Opção inválida. Tente novamente.");
 				break;
 			}
-		} while (choice != 6);
+		} while (choice != 7);
 		scanner.close();
 		return "";
 	}
 }
+

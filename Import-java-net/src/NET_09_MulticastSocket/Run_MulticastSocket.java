@@ -1,8 +1,11 @@
 package NET_09_MulticastSocket;
 
 import java.util.Scanner;
+
+import MainClass.Menu;
 import util.LimparConsole;
 import util.Pausar;
+import util.VoutarMenu;
 
 public class Run_MulticastSocket {
 
@@ -15,7 +18,7 @@ public class Run_MulticastSocket {
 		// Vetor de opções do menu
 		String[] menuOptions = { "|_ MulticastSocket = Simple", "|_ MulticastSocket = If e else if",
 				"|_ MulticastSocket = For com Matrix", "|_ MulticastSocket = do while com Matrix",
-				"|_ MulticastSocket = Vetor", "|_ MulticastSocket = Sair" };
+				"|_ MulticastSocket = Vetor", "|_ Voutar para o menu", "|_ Sair" };
 
 		int choice;
 		do {
@@ -70,8 +73,16 @@ public class Run_MulticastSocket {
 				clear.CleanConsole_Run();
 				break;
 
-			case 6: // Sair
+			case 6: // Voutar para o MEUNU
+				VoutarMenu voutarMenu = new VoutarMenu();
+				voutarMenu.run_CaracteresMenu_Red();
+				System.out.println("\n\n");
+				Menu menu = new Menu();
+				menu.Meun_Run();
 
+				break;
+
+			case 7: // Sair
 				System.out.println("Encerrando o programa...");
 				break;
 
@@ -79,7 +90,7 @@ public class Run_MulticastSocket {
 				System.out.println("Opção inválida. Tente novamente.");
 				break;
 			}
-		} while (choice != 6);
+		} while (choice != 7);
 		scanner.close();
 		return "";
 	}

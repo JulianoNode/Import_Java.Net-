@@ -1,12 +1,15 @@
 package NET_01_URL;
 
 import java.util.Scanner;
+
+import MainClass.Menu;
 import util.LimparConsole;
 import util.Pausar;
+import util.VoutarMenu;
 
 public class Run_URL {
 	
-	public String Start_URL() {
+	public String Start_URL() throws Exception {
 
 		Pausar pausar = new Pausar();
 		LimparConsole clear = new LimparConsole();
@@ -14,7 +17,7 @@ public class Run_URL {
 
 		// Vetor de opções do menu
 		String[] menuOptions = { "|_ URL = Simple", "|_ URL = If e else if", "|_ URL = For com Matrix",
-				"|_ URL = do while com Matrix", "|_ URL = Vetor", "|_ URL = Sair" };
+				"|_ URL = do while com Matrix", "|_ URL = Vetor", "|_ Voutar para o menu", "|_ Sair"};
 
 		int choice;
 		do {
@@ -68,9 +71,17 @@ public class Run_URL {
 				pausar.run_Pause();
 				clear.CleanConsole_Run();
 				break;
+				
+			case 6: // Voutar para o MEUNU
+				VoutarMenu voutarMenu = new VoutarMenu();
+				voutarMenu.run_CaracteresMenu_Red();
+				System.out.println("\n\n");
+				Menu menu = new Menu();
+				menu.Meun_Run();
+				
+				break;
 
-			case 6: // Sair
-
+			case 7: // Sair
 				System.out.println("Encerrando o programa...");
 				break;
 
@@ -78,7 +89,7 @@ public class Run_URL {
 				System.out.println("Opção inválida. Tente novamente.");
 				break;
 			}
-		} while (choice != 6);
+		} while (choice != 7);
 		scanner.close();
 		return "";
 	}

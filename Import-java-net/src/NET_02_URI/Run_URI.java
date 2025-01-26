@@ -1,20 +1,23 @@
 package NET_02_URI;
 
 import java.util.Scanner;
+
+import MainClass.Menu;
 import util.LimparConsole;
 import util.Pausar;
+import util.VoutarMenu;
 
 public class Run_URI {
-	
-	public String Start_URI() {
+
+	public String Start_URI() throws Exception {
 
 		Pausar pausar = new Pausar();
 		LimparConsole clear = new LimparConsole();
 		Scanner scanner = new Scanner(System.in);
 
 		// Vetor de opções do menu
-		String[] menuOptions = { "|_URI = Simple", "|_URI = If e else if", "|_URI = For com Matrix",
-				"|_URI = do while com Matrix", "|_URI = Vetor", "|_URI = Sair" };
+		String[] menuOptions = { "|_ URI = Simple", "|_ URI = If e else if", "|_ URI = For com Matrix",
+				"|_ URI = do while com Matrix", "|_ URI = Vetor", "|_ Voutar para o menu", "|_ Sair" };
 
 		int choice;
 		do {
@@ -69,8 +72,16 @@ public class Run_URI {
 				clear.CleanConsole_Run();
 				break;
 
-			case 6: // Sair
+			case 6: // Voutar para o MEUNU
+				VoutarMenu voutarMenu = new VoutarMenu();
+				voutarMenu.run_CaracteresMenu_Red();
+				System.out.println("\n\n");
+				Menu menu = new Menu();
+				menu.Meun_Run();
 
+				break;
+
+			case 7: // Sair
 				System.out.println("Encerrando o programa...");
 				break;
 
@@ -78,7 +89,7 @@ public class Run_URI {
 				System.out.println("Opção inválida. Tente novamente.");
 				break;
 			}
-		} while (choice != 6);
+		} while (choice != 7);
 		scanner.close();
 		return "";
 	}

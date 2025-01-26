@@ -1,12 +1,15 @@
 package NET_07_ServerSocket;
 
 import java.util.Scanner;
+
+import MainClass.Menu;
 import util.LimparConsole;
 import util.Pausar;
+import util.VoutarMenu;
 
 public class Run_ServerSocket {
 
-	public String Start_ServerSocket() {
+	public String Start_ServerSocket() throws Exception {
 
 		Pausar pausar = new Pausar();
 		LimparConsole clear = new LimparConsole();
@@ -15,7 +18,7 @@ public class Run_ServerSocket {
 		// Vetor de opções do menu
 		String[] menuOptions = { "|_ ServerSocket = Simple", "|_ ServerSocket = If e else if",
 				"|_ ServerSocket = For com Matrix", "|_ ServerSocket = do while com Matrix", "|_ ServerSocket = Vetor",
-				"|_ ServerSocket = Sair" };
+				"|_ Voutar para o menu", "|_ Sair" };
 
 		int choice;
 		do {
@@ -70,8 +73,16 @@ public class Run_ServerSocket {
 				clear.CleanConsole_Run();
 				break;
 
-			case 6: // Sair
+			case 6: // Voutar para o MEUNU
+				VoutarMenu voutarMenu = new VoutarMenu();
+				voutarMenu.run_CaracteresMenu_Red();
+				System.out.println("\n\n");
+				Menu menu = new Menu();
+				menu.Meun_Run();
 
+				break;
+
+			case 7: // Sair
 				System.out.println("Encerrando o programa...");
 				break;
 
@@ -79,7 +90,7 @@ public class Run_ServerSocket {
 				System.out.println("Opção inválida. Tente novamente.");
 				break;
 			}
-		} while (choice != 6);
+		} while (choice != 7);
 		scanner.close();
 		return "";
 	}
