@@ -1,21 +1,24 @@
 package NET_18_CookieManager;
 
 import java.util.Scanner;
+
+import MainClass.Menu;
 import util.LimparConsole;
 import util.Pausar;
+import util.VoutarMenu;
 
 public class Run_CookieManager {
 
-	public String Start_CookieManager() {
+	public String Start_CookieManager() throws Exception {
 
 		Pausar pausar = new Pausar();
 		LimparConsole clear = new LimparConsole();
 		Scanner scanner = new Scanner(System.in);
 
 		// Vetor de opções do menu
-		String[] menuOptions = { "|_ A = Simple", "|_ A = If e else if",
-				"|_ A = For com Matrix", "|_ A = do while com Matrix", "|_ A = Vetor",
-				"|_ A = Sair" };
+		String[] menuOptions = { "|_ CookieManager = Simple", "|_ CookieManager = If e else if",
+				"|_ CookieManager = For com Matrix", "|_ CookieManager = do while com Matrix",
+				"|_ CookieManager = Vetor", "|_ Voutar para o menu", "|_ Sair" };
 
 		int choice;
 		do {
@@ -70,8 +73,16 @@ public class Run_CookieManager {
 				clear.CleanConsole_Run();
 				break;
 
-			case 6: // Sair
+			case 6: // Voutar para o MEUNU
+				VoutarMenu voutarMenu = new VoutarMenu();
+				voutarMenu.run_CaracteresMenu_Red();
+				System.out.println("\n\n");
+				Menu menu = new Menu();
+				menu.Meun_Run();
 
+				break;
+
+			case 7: // Sair
 				System.out.println("Encerrando o programa...");
 				break;
 
@@ -79,7 +90,7 @@ public class Run_CookieManager {
 				System.out.println("Opção inválida. Tente novamente.");
 				break;
 			}
-		} while (choice != 6);
+		} while (choice != 7);
 		scanner.close();
 		return "";
 	}
