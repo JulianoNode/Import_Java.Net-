@@ -1,30 +1,29 @@
-package NET_NextComand;
+package NET_32_CookieStore;
 
 import util.Linhas;
 
-public class If_Else_IF {
-	public String If_Else_IF_Run() {
-
+public class While_Matrix {
+	public String VetorMatrix_Run() {
 		Linhas linhas = new Linhas();
-		String collec = "\n\tList<E>: Representa uma lista ordenada.\n";
+		String collec = "\n\t Nome do comando \n";
 		System.err.println(collec);
-
+		
 		linhas.run_Caracteres();
-		Import_4 import_1 = new Import_4();
+		Import_A import_1 = new Import_A();
 		System.out.println(import_1.run_Import_1());
 		
 		linhas.run_Caracteres();
-		Import_5 import_2 = new Import_5();
+		Import_B import_2 = new Import_B();
 		System.out.println(import_2.run_Import_2());
 		
 		linhas.run_Caracteres();
-		Import_6 import_3 = new Import_6();
+		Import_C import_3 = new Import_C();
 		System.out.println(import_3.run_Import_3());
 		return "_________________________________________";		
 	}
 }
 
-class Import_4{
+class Import_A{
 	
 	public String run_Import_1() {
 		System.err.println("\n");
@@ -32,14 +31,14 @@ class Import_4{
 	}
 }
 
-class Import_5{
+class Import_B{
 	public String run_Import_2() {
 		System.err.println("\n");
-		return "\n\n***** ***** |_____| ***** *****";	
+		return "\n\n***** ***** |_____| *****s *****";	
 	}
 }
 
-class Import_6{
+class Import_C{
 	public String run_Import_3() {
 		System.err.println("\n");
 		return "\n\n***** ***** |_____| ***** *****";	

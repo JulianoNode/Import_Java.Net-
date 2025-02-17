@@ -29,9 +29,9 @@ public class Simples {
 		Import_4t import_4t = new Import_4t();
 		System.out.println(import_4t.run_Import_4t());
 
-		linhas.run_Caracteres();
-		Import_5t import_5t = new Import_5t();
-		System.out.println(import_5t.run_Import_5t());
+		//linhas.run_Caracteres();
+		//Import_5t import_5t = new Import_5t();
+		//System.out.println(import_5t.run_Import_5t());
 		return "_________________________________________";
 	}
 }

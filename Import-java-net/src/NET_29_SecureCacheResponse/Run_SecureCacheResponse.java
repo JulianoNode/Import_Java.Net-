@@ -1,4 +1,4 @@
-package NET_NextComand;
+package NET_29_SecureCacheResponse;
 
 import java.util.Scanner;
 
@@ -7,18 +7,18 @@ import util.LimparConsole;
 import util.Pausar;
 import util.VoutarMenu;
 
-public class Run_ {
+public class Run_SecureCacheResponse {
 
-	public String Start_() throws Exception {
+	public String Start_SecureCacheResponse() throws Exception {
 
 		Pausar pausar = new Pausar();
 		LimparConsole clear = new LimparConsole();
 		Scanner scanner = new Scanner(System.in);
 
 		// Vetor de opções do menu
-		String[] menuOptions = { "|_ A = Simple", "|_ A = If e else if",
-				"|_ A = For com Matrix", "|_ A = do while com Matrix", "|_ A = Vetor",
-				"|_ Voutar para o menu", "|_ Sair" };
+		String[] menuOptions = { ".👉 SecureCacheResponse = Simple", ".👉 SecureCacheResponse = If e else if",
+				".👉 SecureCacheResponse = For com Matrix", ".👉 SecureCacheResponse = do while com Matrix", ".👉 SecureCacheResponse = Vetor",
+				".👉 Voutar para o menu", ".👉 Sair" };
 
 		int choice;
 		do {
