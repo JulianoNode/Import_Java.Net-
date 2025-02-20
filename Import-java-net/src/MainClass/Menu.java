@@ -28,7 +28,14 @@ import NET_23_URLDecoder.Run_URLDecoder;
 import NET_24_NetworkInterface.Run_NetworkInterface;
 import NET_25_SocketPermission.Run_SocketPermission;
 import NET_26_DatagramPacket.Run_DatagramPacket;
-import NET_28_ResponseCache.Run_ResponseCache;
+import NET_27_ResponseCache.Run_ResponseCache;
+import NET_28_SecureCacheResponse.Run_SecureCacheResponse;
+import NET_29_FileNameMap.Run_FileNameMap;
+import NET_30_CookiePolicy.Run_CookiePolicy;
+import NET_31_ProtocolFamily.Run_ProtocolFamily;
+import NET_32_ProxyType.Run_ProxyType;
+import NET_33_StandardProtocolFamily.Run_StandardProtocolFamily;
+import NET_34_StandardSocketOptions.Run_StandardSocketOptions;
 import util.LimparConsole;
 import util.Pausar;
 
@@ -77,7 +84,6 @@ public class Menu {
 						+ "\t📌 Lista Completa das Interfaces do java.net\n\n",
 				"👉 NET = FileNameMap – Mapeia extensões de arquivos para tipos MIME.",
 				"👉 NET = CookiePolicy – Define políticas para aceitação de cookies.",
-				"👉 NET = CookieStore – Interface para armazenar cookies.",
 				"👉 NET = ProtocolFamily – Representa uma família de protocolos de rede.\n\n"
 						+ "\t📌 Lista Completa das Enumerações do java.net\n\n",
 				"👉 NET = Proxy.Type – Define os tipos de proxy (DIRECT, HTTP, SOCKS).",
@@ -301,48 +307,62 @@ public class Menu {
 				break;
 
 			case 28:
+				Run_SecureCacheResponse response = new Run_SecureCacheResponse();
+				System.out.println(response.Start_SecureCacheResponse());
+				
 				pausar.run_Pause();
 				clear.CleanConsole_Run();
 				break;
 
 			case 29:
+				Run_FileNameMap fileNameMap = new Run_FileNameMap();
+				System.out.println(fileNameMap.Start_FileNameMap());
+				
 				pausar.run_Pause();
 				clear.CleanConsole_Run();
 				break;
 
 			case 30:
+				Run_CookiePolicy cookiePolicy = new  Run_CookiePolicy();
+				System.out.println(cookiePolicy.Start_CookiePolicy());
+				
+				pausar.run_Pause();
+				clear.CleanConsole_Run();
+				break;
+			case 31:
+				Run_ProtocolFamily ProFamily = new Run_ProtocolFamily();
+				System.out.println(ProFamily.Start_ProtocolFamily());
+				
 				pausar.run_Pause();
 				clear.CleanConsole_Run();
 				break;
 
-			case 31:
-				pausar.run_Pause();
-				clear.CleanConsole_Run();
-				break;
 
 			case 32:
+				Run_ProxyType proxyType = new Run_ProxyType();
+				System.out.println(proxyType.Start_ProxyType());
+				
 				pausar.run_Pause();
 				clear.CleanConsole_Run();
 				break;
 
 			case 33:
+				Run_StandardProtocolFamily StaProFamily = new Run_StandardProtocolFamily();
+				System.out.println(StaProFamily.Start_StandardProtocolFamily());
+				
 				pausar.run_Pause();
 				clear.CleanConsole_Run();
 				break;
 
 			case 34:
-				pausar.run_Pause();
-				clear.CleanConsole_Run();
-				break;
-
-			case 35:
-				pausar.run_Pause();
-				clear.CleanConsole_Run();
-				break;
-
+				Run_StandardSocketOptions SSOptions = new Run_StandardSocketOptions();
+				System.out.println(SSOptions.Start_StandardSocketOptions());
 				
+				pausar.run_Pause();
+				clear.CleanConsole_Run();
+				break;
 
-			case 36: // Sair
+			case 35: // Sair
 				System.out.println("Encerrando o programa...");
 				break;
 			
@@ -350,7 +370,7 @@ public class Menu {
 				System.out.println("Opção inválida. Tente novamente.");
 				break;
 			}
-		} while (choice != 36);
+		} while (choice != 35);
 		scanner.close();
 
 		return "";
