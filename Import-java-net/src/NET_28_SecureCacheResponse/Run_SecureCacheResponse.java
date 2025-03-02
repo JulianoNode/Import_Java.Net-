@@ -18,7 +18,7 @@ public class Run_SecureCacheResponse {
 		// Vetor de opções do menu
 		String[] menuOptions = { ".👉 SecureCacheResponse = Simple", ".👉 SecureCacheResponse = If e else if",
 				".👉 SecureCacheResponse = For com Matrix", ".👉 SecureCacheResponse = do while com Matrix", ".👉 SecureCacheResponse = Vetor",
-				".👉 Voutar para o menu", ".👉 Sair" };
+				".👉 Voutar para o menu"};
 
 		int choice;
 		do {

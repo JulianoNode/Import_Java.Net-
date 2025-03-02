@@ -18,7 +18,7 @@ public class Run_Inet4Address {
 		// Vetor de opções do menu
 		String[] menuOptions = { "|_ Inet4Address = Simple", "|_ Inet4Address = If e else if",
 				"|_ Inet4Address = For com Matrix", "|_ Inet4Address = do while com Matrix", "|_ Inet4Address = Vetor",
-				"|_ Voutar para o menu", "|_ Sair" };
+				"|_ Voutar para o menu"};
 
 		int choice;
 		do {

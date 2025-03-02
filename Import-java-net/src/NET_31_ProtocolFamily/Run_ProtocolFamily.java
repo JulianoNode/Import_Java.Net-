@@ -18,7 +18,7 @@ public class Run_ProtocolFamily {
 		// Vetor de opções do menu
 		String[] menuOptions = { ".👉 ProtocolFamily = Simple", ".👉 ProtocolFamily = If e else if",
 				".👉 ProtocolFamily = For com Matrix", ".👉 ProtocolFamily = do while com Matrix",
-				".👉 ProtocolFamily = Vetor", ".👉 Voutar para o menu", ".👉 Sair" };
+				".👉 ProtocolFamily = Vetor", ".👉 Voutar para o menu" };
 
 		int choice;
 		do {

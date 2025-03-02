@@ -18,7 +18,7 @@ public class Run_URLConnection {
 		// Vetor de opções do menu
 		String[] menuOptions = { "|_ URLConnection = Simple", "|_ URLConnection = If e else if",
 				"|_ URLConnection = For com Matrix", "|_ URLConnection = do while com Matrix",
-				"|_ URLConnection = Vetor", "|_ Voutar para o menu", "|_ Sair" };
+				"|_ URLConnection = Vetor", "|_ Voutar para o menu" };
 
 		int choice;
 		do {

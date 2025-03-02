@@ -18,7 +18,7 @@ public class Run_Authenticator {
 		// Vetor de opções do menu
 		String[] menuOptions = { "|_ Authenticator = Simple", "|_ Authenticator = If e else if",
 				"|_ Authenticator = For com Matrix", "|_ Authenticator = do while com Matrix",
-				"|_ Authenticator = Vetor", "|_ Voutar para o menu", "|_ Sair" };
+				"|_ Authenticator = Vetor", "|_ Voutar para o menu"};
 
 		int choice;
 		do {

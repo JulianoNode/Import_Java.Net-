@@ -18,7 +18,7 @@ public class Run_FileNameMap {
 		// Vetor de opções do menu
 		String[] menuOptions = { ".👉 FileNameMap = Simple", ".👉 FileNameMap = If e else if",
 				".👉 FileNameMap = For com Matrix", ".👉 FileNameMap = do while com Matrix", ".👉 FileNameMap = Vetor",
-				".👉 Voutar para o menu", ".👉 Sair" };
+				".👉 Voutar para o menu"};
 
 		int choice;
 		do {

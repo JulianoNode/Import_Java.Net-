@@ -17,7 +17,7 @@ public class Run_URL {
 
 		// Vetor de opções do menu
 		String[] menuOptions = { "|_ URL = Simple", "|_ URL = If e else if", "|_ URL = For com Matrix",
-				"|_ URL = do while com Matrix", "|_ URL = Vetor", "|_ Voutar para o menu", "|_ Sair"};
+				"|_ URL = do while com Matrix", "|_ URL = Vetor", "|_ Voutar para o menu"};
 
 		int choice;
 		do {

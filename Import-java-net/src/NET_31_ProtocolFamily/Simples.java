@@ -6,7 +6,8 @@ public class Simples {
 	public String Simples_Run() {
 
 		Linhas linhas = new Linhas();
-		String collec = "\n\t Nome do comando \n";
+		String collec = "\n\t ProtocolFamily – Representa uma família de protocolos de rede.\r\n"
+				+ " \n";
 		System.err.println(collec);
 		
 		linhas.run_Caracteres();

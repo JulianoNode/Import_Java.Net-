@@ -18,7 +18,7 @@ public class Run_InetSocketAddress {
 		// Vetor de opções do menu
 		String[] menuOptions = { "|_ InetSocketAddress = Simple", "|_ InetSocketAddress = If e else if",
 				"|_ InetSocketAddress = For com Matrix", "|_ InetSocketAddress = do while com Matrix", "|_ InetSocketAddress = Vetor",
-				"|_ Voutar para o menu", "|_ Sair" };
+				"|_ Voutar para o menu"};
 
 		int choice;
 		do {

@@ -6,7 +6,7 @@ public class Simples {
 	public String Simples_Run() {
 
 		Linhas linhas = new Linhas();
-		String collec = "\n\t Nome do comando \n";
+		String collec = "\n\t StandardProtocolFamily – Define famílias de protocolo (INET, INET6). \n";
 		System.err.println(collec);
 		
 		linhas.run_Caracteres();

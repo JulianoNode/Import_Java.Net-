@@ -18,7 +18,7 @@ public class Run_ResponseCache {
 		// Vetor de opções do menu
 		String[] menuOptions = { ".👉 ResponseCache = Simple", ".👉 ResponseCache = If e else if",
 				".👉 ResponseCache = For com Matrix", ".👉 ResponseCache = do while com Matrix",
-				".👉 ResponseCache = Vetor", ".👉 Voutar para o menu", ".👉 Sair" };
+				".👉 ResponseCache = Vetor", ".👉 Voutar para o menu" };
 
 		int choice;
 		do {

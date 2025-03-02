@@ -18,7 +18,7 @@ public class Run_URLDecoder {
 		// Vetor de opções do menu
 		String[] menuOptions = { ".👉 URLDecoder = Simple", ".👉 URLDecoder = If e else if",
 				".👉 URLDecoder = For com Matrix", ".👉 URLDecoder = do while com Matrix", ".👉 URLDecoder = Vetor",
-				".👉 Voutar para o menu", ".👉 Sair" };
+				".👉 Voutar para o menu"};
 
 		int choice;
 		do {

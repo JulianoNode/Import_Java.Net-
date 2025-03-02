@@ -18,7 +18,7 @@ public class Run_CookieHandler {
 		// Vetor de opções do menu
 		String[] menuOptions = { "|_ CookieHandler = Simple", "|_ CookieHandler = If e else if",
 				"|_ CookieHandler = For com Matrix", "|_ CookieHandler = do while com Matrix",
-				"|_ CookieHandler = Vetor", "|_ Voutar para o menu", "|_ Sair" };
+				"|_ CookieHandler = Vetor", "|_ Voutar para o menu"};
 
 		int choice;
 		do {

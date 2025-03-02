@@ -18,7 +18,7 @@ public class Run_MulticastSocket {
 		// Vetor de opções do menu
 		String[] menuOptions = { "|_ MulticastSocket = Simple", "|_ MulticastSocket = If e else if",
 				"|_ MulticastSocket = For com Matrix", "|_ MulticastSocket = do while com Matrix",
-				"|_ MulticastSocket = Vetor", "|_ Voutar para o menu", "|_ Sair" };
+				"|_ MulticastSocket = Vetor", "|_ Voutar para o menu"};
 
 		int choice;
 		do {

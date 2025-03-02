@@ -18,7 +18,7 @@ public class Run_StandardSocketOptions {
 		// Vetor de opções do menu
 		String[] menuOptions = { ".👉 StandardSocketOptions = Simple", ".👉 StandardSocketOptions = If e else if",
 				".👉 StandardSocketOptions = For com Matrix", ".👉 StandardSocketOptions = do while com Matrix",
-				".👉 StandardSocketOptions = Vetor", ".👉 Voutar para o menu", ".👉 Sair" };
+				".👉 StandardSocketOptions = Vetor", ".👉 Voutar para o menu"};
 
 		int choice;
 		do {

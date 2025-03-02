@@ -18,7 +18,7 @@ public class Run_ProxySelector {
 		// Vetor de opções do menu
 		String[] menuOptions = { "|_ ProxySelector = Simple", "|_ ProxySelector = If e else if",
 				"|_ ProxySelector = For com Matrix", "|_ ProxySelector = do while com Matrix",
-				"|_ ProxySelector = Vetor", "|_ Voutar para o menu", "|_ Sair" };
+				"|_ ProxySelector = Vetor", "|_ Voutar para o menu"};
 
 		int choice;
 		do {

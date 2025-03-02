@@ -2,10 +2,20 @@ package NET_28_SecureCacheResponse;
 
 import util.Linhas;
 
-import java.net.ResponseCache;
+import java.io.IOException;
+import java.io.InputStream;
 import java.net.SecureCacheResponse;
-import java.net.URI;
+import java.util.Collections;
+import java.util.List;
 import java.util.Map;
+
+import javax.net.ssl.SSLPeerUnverifiedException;
+
+import java.net.CacheRequest;
+import java.net.ResponseCache;
+import java.net.URI;
+import java.net.URLConnection;
+import java.security.Principal;
 
 public class Simples {
 	public String Simples_Run() throws Exception {
@@ -25,14 +35,6 @@ public class Simples {
 		linhas.run_Caracteres();
 		Import_3 import_3 = new Import_3();
 		System.out.println(import_3.run_Import_3());
-
-		linhas.run_Caracteres();
-		Import_4t import_4t = new Import_4t();
-		System.out.println(import_4t.run_Import_4t());
-
-		linhas.run_Caracteres();
-		Import_5t import_5t = new Import_5t();
-		System.out.println(import_5t.run_Import_5t());
 		return "_________________________________________";
 	}
 }
@@ -67,28 +69,80 @@ class Import_1 {
 
 class Import_2 {
 	public String run_Import_2() {
-		System.err.println("\n");
+		System.err.println(" 2: Simulando uma resposta segura personalizada (classe anônima) \n");
+
+		SecureCacheResponse response = new SecureCacheResponse() {
+			@Override
+			public String getCipherSuite() {
+				return "TLS_AES_128_GCM_SHA256";
+			}
+
+			@Override
+			public List<java.security.cert.Certificate> getLocalCertificateChain() {
+				return Collections.emptyList();
+			}
+
+			@Override
+			public List<java.security.cert.Certificate> getServerCertificateChain() {
+				return Collections.emptyList();
+			}
+
+			@Override
+			public Map<String, List<String>> getHeaders() {
+				return Collections.singletonMap("Content-Type", Collections.singletonList("text/html"));
+			}
+
+			@Override
+			public Principal getPeerPrincipal() throws SSLPeerUnverifiedException {
+				// TODO Auto-generated method stub
+				return null;
+			}
+
+			@Override
+			public Principal getLocalPrincipal() {
+				// TODO Auto-generated method stub
+				return null;
+			}
+
+			@Override
+			public InputStream getBody() throws IOException {
+				// TODO Auto-generated method stub
+				return null;
+			}
+		};
+
+		try {
+			System.out.println("Cipher Suite: " + response.getCipherSuite());
+			System.out.println("Cabeçalhos: " + response.getHeaders());
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 		return "\n\n***** ***** |_____| ***** *****";
 	}
 }
 
-class Import_3 {
+class Import_3 extends ResponseCache {
+
+	@Override
+	public SecureCacheResponse get(URI uri, String requestMethod, Map<String, List<String>> requestHeaders)
+			throws IOException {
+		System.out.println("Interceptando solicitação para URI: " + uri);
+		return null; // Simula um cache vazio
+	}
+
+	@Override
+	public CacheRequest put(URI uri, URLConnection conn) throws IOException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 	public String run_Import_3() {
-		System.err.println("\n");
-		return "\n\n***** ***** |_____| ***** *****";
-	}
-}
+		System.err.println("3: Criando um ResponseCache personalizado\n");
+		
+		ResponseCache.setDefault(new Import_3());
+		System.out.println("Cache personalizado configurado.");
 
-class Import_4t {
-	public String run_Import_4t() {
-		System.err.println("\n");
 		return "\n\n***** ***** |_____| ***** *****";
 	}
-}
 
-class Import_5t {
-	public String run_Import_5t() {
-		System.err.println("\n");
-		return "\n\n***** ***** |_____| ***** *****";
-	}
 }

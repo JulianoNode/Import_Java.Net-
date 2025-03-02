@@ -18,7 +18,7 @@ public class Run_SocketPermission {
 		// Vetor de opções do menu
 		String[] menuOptions = { ".👉 SocketPermission = Simple", ".👉 SocketPermission = If e else if",
 				".👉 SocketPermission = For com Matrix", ".👉 SocketPermission = do while com Matrix",
-				".👉 SocketPermission = Vetor", ".👉 Voutar para o menu", ".👉 Sair" };
+				".👉 SocketPermission = Vetor", ".👉 Voutar para o menu"};
 
 		int choice;
 		do {

@@ -18,7 +18,7 @@ public class Run_ServerSocket {
 		// Vetor de opções do menu
 		String[] menuOptions = { "|_ ServerSocket = Simple", "|_ ServerSocket = If e else if",
 				"|_ ServerSocket = For com Matrix", "|_ ServerSocket = do while com Matrix", "|_ ServerSocket = Vetor",
-				"|_ Voutar para o menu", "|_ Sair" };
+				"|_ Voutar para o menu"};
 
 		int choice;
 		do {

@@ -18,7 +18,7 @@ public class Run_HttpURLConnection {
 		// Vetor de opções do menu
 		String[] menuOptions = { "|_ HttpURLConnection = Simple", "|_ HttpURLConnection = If e else if",
 				"|_ HttpURLConnection = For com Matrix", "|_ HttpURLConnection = do while com Matrix",
-				"|_ HttpURLConnection = Vetor", "|_ Voutar para o menu", "|_ Sair" };
+				"|_ HttpURLConnection = Vetor", "|_ Voutar para o menu" };
 
 		int choice;
 		do {

@@ -18,7 +18,7 @@ public class Run_DatagramSocket {
 		// Vetor de opções do menu
 		String[] menuOptions = { "|_ DatagramSocket = Simple", "|_ DatagramSocket = If e else if",
 				"|_ DatagramSocket = For com Matrix", "|_ DatagramSocket = do while com Matrix",
-				"|_ DatagramSocket = Vetor", "|_ Voutar para o menu", "|_ Sair" };
+				"|_ DatagramSocket = Vetor", "|_ Voutar para o menu"};
 
 		int choice;
 		do {

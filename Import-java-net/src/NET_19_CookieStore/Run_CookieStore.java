@@ -18,7 +18,7 @@ public class Run_CookieStore {
 		// Vetor de opções do menu
 		String[] menuOptions = { "|_ CookieStore = Simple", "|_ CookieStore = If e else if",
 				"|_ CookieStore = For com Matrix", "|_ CookieStore = do while com Matrix", "|_ CookieStore = Vetor",
-				"|_ Voutar para o menu", "|_ Sair" };
+				"|_ Voutar para o menu"};
 
 		int choice;
 		do {

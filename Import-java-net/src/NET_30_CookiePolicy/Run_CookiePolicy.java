@@ -18,7 +18,7 @@ public class Run_CookiePolicy {
 		// Vetor de opções do menu
 		String[] menuOptions = { ".👉 CookiePolicy = Simple", ".👉 CookiePolicy = If e else if",
 				".👉 CookiePolicy = For com Matrix", ".👉 CookiePolicy = do while com Matrix",
-				".👉 CookiePolicy = Vetor", ".👉 Voutar para o menu", ".👉 Sair" };
+				".👉 CookiePolicy = Vetor", ".👉 Voutar para o menu"};
 
 		int choice;
 		do {
@@ -76,7 +76,9 @@ public class Run_CookiePolicy {
 			case 6: // Voutar para o MEUNU
 				VoutarMenu voutarMenu = new VoutarMenu();
 				voutarMenu.run_CaracteresMenu_Red();
+				
 				System.out.println("\n\n");
+				
 				Menu menu = new Menu();
 				menu.Meun_Run();
 

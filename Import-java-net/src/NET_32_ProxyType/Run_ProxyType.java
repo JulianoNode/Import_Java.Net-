@@ -18,7 +18,7 @@ public class Run_ProxyType {
 		// Vetor de opções do menu
 		String[] menuOptions = { ".👉 ProxyType  = Simple", ".👉 ProxyType  = If e else if",
 				".👉 ProxyType  = For com Matrix", ".👉 ProxyType  = do while com Matrix", ".👉 ProxyType  = Vetor",
-				".👉 Voutar para o menu", ".👉 Sair" };
+				".👉 Voutar para o menu" };
 
 		int choice;
 		do {

@@ -18,7 +18,7 @@ public class Run_PasswordAuthentication {
 		// Vetor de opções do menu
 		String[] menuOptions = { "|_ PasswordAuthentication = Simple", "|_ PasswordAuthentication = If e else if",
 				"|_ PasswordAuthentication = For com Matrix", "|_ PasswordAuthentication = do while com Matrix",
-				"|_ PasswordAuthentication = Vetor", "|_ Voutar para o menu", "|_ Sair" };
+				"|_ PasswordAuthentication = Vetor", "|_ Voutar para o menu"};
 
 		int choice;
 		do {

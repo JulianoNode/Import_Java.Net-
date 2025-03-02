@@ -6,7 +6,7 @@ public class Simples {
 	public String Simples_Run() {
 
 		Linhas linhas = new Linhas();
-		String collec = "\n\t Nome do comando \n";
+		String collec = "\n\t Proxy.Type – Define os tipos de proxy (DIRECT, HTTP, SOCKS). \n";
 		System.err.println(collec);
 		
 		linhas.run_Caracteres();

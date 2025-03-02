@@ -18,7 +18,7 @@ public class Run_NetworkInterface {
 		// Vetor de opções do menu
 		String[] menuOptions = { ".👉 NetworkInterface = Simple", ".👉 NetworkInterface = If e else if",
 				".👉 NetworkInterface = For com Matrix", ".👉 NetworkInterface = do while com Matrix", ".👉 NetworkInterface = Vetor",
-				".👉 Voutar para o menu", ".👉 Sair" };
+				".👉 Voutar para o menu"};
 
 		int choice;
 		do {

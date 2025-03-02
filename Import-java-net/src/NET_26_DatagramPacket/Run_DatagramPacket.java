@@ -18,7 +18,7 @@ public class Run_DatagramPacket {
 		// Vetor de opções do menu
 		String[] menuOptions = { ".👉 DatagramPacket = Simple", ".👉 DatagramPacket = If e else if",
 				".👉 DatagramPacket = For com Matrix", ".👉 DatagramPacket = do while com Matrix",
-				".👉 DatagramPacket = Vetor", ".👉 Voutar para o menu", ".👉 Sair" };
+				".👉 DatagramPacket = Vetor", ".👉 Voutar para o menu"};
 
 		int choice;
 		do {

@@ -18,7 +18,7 @@ public class Run_JarURLConnection {
 		// Vetor de opções do menu
 		String[] menuOptions = { "|_ JarURLConnectoin = Simple", "|_ JarURLConnectoin = If e else if",
 				"|_ JarURLConnectoin = For com Matrix", "|_ JarURLConnectoin = do while com Matrix",
-				"|_ JarURLConnectoin = Vetor", "|_ Voutar para o menu", "|_ Sair" };
+				"|_ JarURLConnectoin = Vetor", "|_ Voutar para o menu"};
 
 		int choice;
 		do {
